@@ -20,8 +20,8 @@ public class Pizza {
         this.cheesePrice = 80;
         this.takeAwayPrice = 20;
         if (isVeg == true) {
-            this.price = 20;
-            this.takeAwayPrice = 20;
+            this.price = 300;
+            this.toppingsPrice = 70;
 
         } else {
             this.price = 400;
@@ -62,7 +62,7 @@ public class Pizza {
         if (isBillGenerated == false) {
 
 
-        } if (isCheeseAdded == true) {
+            if (isCheeseAdded == true) {
                 this.bill = this.bill + "Extra Cheese Added: " + this.cheesePrice + "\n";
             }
             if (isToppingsAdded == true) {
@@ -73,6 +73,7 @@ public class Pizza {
             }
             this.bill = this.bill + "Total Price: " + this.price + "\n";
             isBillGenerated = true;
+        }
             return this.bill;
         }
     }
